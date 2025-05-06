@@ -25,8 +25,6 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
-    timestamps: false,
-    tableName: 'student_courses_users'
   });
   return User;
 };
