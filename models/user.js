@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
       User.hasOne(models.Student, {
               as: 'student',
               foreignKey: 'user_id'
+          }
+      );
+      User.hasOne(models.Staff, {
+          as: 'staff',
+          foreignKey: 'user_id'
         }
       )
     }
@@ -25,6 +30,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
+    timestamps: false,
+    tableName: 'student_courses_users'
   });
   return User;
 };

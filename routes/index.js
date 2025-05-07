@@ -31,8 +31,10 @@ router.get('/students/:studentId/removeCourse/:courseId', studentController.remo
 router.post('/courses/:courseId/enroll', courseController.enrollStudent);
 router.get('/courses/:courseId/removeStudent/:studentId', courseController.removeStudent);
 
+router.get('/register-student', userController.renderStudentRegistrationForm)
 router.post('/register-student', userController.registerStudent);
 router.get('/register-staff', userController.renderStaffRegistrationForm);
+router.post('/register-staff', userController.registerStaff);
 
 router.get('/login', userController.renderLoginForm);
 router.post('/login', userController.login);
