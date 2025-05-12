@@ -2,6 +2,7 @@ extends ../layout
 
 block content
     h3 Courses
+    if user.can('add course')
     a(href='/courses/add') Add New Course
     table
         thead
